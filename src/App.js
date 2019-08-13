@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { SignIn } from './components/SignIn';
 import Home from './components/Home'
 import DrinksByType from './containers/DrinksByType';
 import DrinkList from './containers/DrinkList';
@@ -10,7 +11,8 @@ function App() {
   return (
     <Router>
       <div>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={SignIn} />
+        <Route exact path="/home" component={Home} />
         <Route exact path="/drinks" component={DrinkList} />
         <Route path="/drinks/:type" component={DrinksByType} />
         <Route exact path="/profile" component={ProfileMain} />
