@@ -1,11 +1,22 @@
 import React from 'react';
 
-export const DrinksByType = (props) => {
-    return (
-        <div>
-            {props.drinkTypes.map((type, index) => {
-                return <button key={type + index}>{type}</button>
-            })}
-        </div>
-    )
+export default class DrinksByType extends React.Component {
+    componentDidMount() {
+        this.props.getDrinksByType(this.props.match.params.type)
+    }
+
+    render() {
+        return (
+            <div>
+                {this.props.currentDrinks.map(drink => {
+                    return (
+                        <div>
+                            <img src={drink.strDrinkThumb} />
+                            <p>{drink.strDrink}</p>
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    }
 }

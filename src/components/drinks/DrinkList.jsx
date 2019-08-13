@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const DrinkList = (props) => {
     return (
         <div>
             {props.drinkTypes.map((type, index) => {
-                return <button key={type + index}>{type}</button>
+                return <Link 
+                    to={`/drinks/${type}`}
+                    key={type + index}>{type}</Link>
             })}
         </div>
     )

@@ -1,9 +1,6 @@
 import axios from "axios"
 
-export async function fetchLocations() {
-  const data = await axios.get(`https://jsonplaceholder.typicode.com/users`)
-  .then(res => {
-    const persons = res.data;
-    this.setState({ persons });
-  })
+export async function getDrinksList(type) {
+  const { data: drinkList} = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${type}`)
+  return drinkList;
 }
