@@ -1,24 +1,10 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// export const DrinkList = (props) => {
-//     return (
-//         <div>
-//             {props.drinkTypes.map((type, index) => {
-//                 return <Link 
-//                     to={`/drinks/${type}`}
-//                     key={type + index}>{type}</Link>
-//             })}
-//         </div>
-//     )
-// }
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
 
+// TODO create database and place these values inside
 const images = [
   {
     url: require('../../images/type/vodka.jpg'),
