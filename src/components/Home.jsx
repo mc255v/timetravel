@@ -19,6 +19,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Chart from './Chart';
 import Orders from './Orders';
+import DrinkList from '../containers/DrinkList';
 
 const drawerWidth = 240;
 
@@ -119,7 +120,7 @@ export default function Dashboard() {
         <Toolbar>
          
           <Typography variant="h6" color="inherit" noWrap>
-            Pick Your Poison
+            Dashboard
           </Typography>
         </Toolbar>
       </AppBar>
@@ -133,10 +134,16 @@ export default function Dashboard() {
                 <Chart />
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
+            {/* Recent Logs */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
                 <Orders />
+              </Paper>
+            </Grid>
+            {/* Type Buttons */}
+            <Grid item xs={12}>
+              <Paper className={classes.paper}>
+                <DrinkList />
               </Paper>
             </Grid>
           </Grid>

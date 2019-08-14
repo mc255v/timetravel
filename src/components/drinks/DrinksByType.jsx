@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
+import Mood from '@material-ui/icons/Mood';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -72,7 +73,7 @@ export default function DrinksByType(props) {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CameraIcon className={classes.icon} />
+          <Mood className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
             Pick Your Poison
           </Typography>
@@ -89,6 +90,15 @@ export default function DrinksByType(props) {
               Choose your drink to add to your personal tracker! This also stores your
               current location, just in case you time travel to a new location.
             </Typography>
+            <div className={classes.heroButtons}>
+              <Grid container spacing={2} justify="center">
+                <Grid item>
+                  <Button component={RouterLink} to="/home" variant="contained" color="primary">
+                    Return Home
+                  </Button>
+                </Grid>
+              </Grid>
+            </div>
           </Container>
         </div>
         <Container className={classes.cardGrid} maxWidth="md">

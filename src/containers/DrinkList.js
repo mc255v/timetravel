@@ -1,4 +1,4 @@
-import { DrinkList } from "../components/drinks/DrinkList";
+import DrinkList from "../components/drinks/DrinkList";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => {
