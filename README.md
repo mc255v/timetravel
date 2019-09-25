@@ -6,6 +6,8 @@
 
 # The app for the tipsy time traveler in all of us:
 
+This is an application that was created during my time at Code Chrysalis where we are given a single day to build a working MVP.
+
 The purpose of this app is to provide a way to track not only the amount of drinks during a session, but also to track the actual drink, how it was, and with simple geo-tagging, where it (and you) were. All the info gathered in a session is presented in an easy to view dashboard with a visual representation as well as a log of your previous session. Learn your limits, track your consumption, and never again forget where you found your new favorite drink!
 
 ## Technologies Used
